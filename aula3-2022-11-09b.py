@@ -22,3 +22,12 @@ valores = [1.99, 24.50, 78.27, 1515.50]
 #se eu quiser calcular o imposto destes quatro valores
 for valor in valores:
   print("O imposto de {} é {}".format(valor, calcularImposto(valor)))
+
+#declarar uma funcao calcularImpostoAliquota que recebe dois parametros: o preco do produto e a aliquota de imposto a ser aplicada e retorna o imposto calculado. Se a aliquota nao for informada, utilize 7% como padrao
+def calcularImpostoAliquota(valor, aliquota = 7):
+  imposto = valor * (aliquota /100)
+  return imposto
+
+print("\n")
+for valor in valores:
+  print("O imposto de {} é {}".format(valor, calcularImpostoAliquota(valor, 12)))
